@@ -60,25 +60,34 @@ func getCypheredCounter128Bit(using key: SymmetricKey) -> String? {
     return Array(simplified128Counter[0..<(simplified128Counter.count/2)]).joined()
 }
 
-var numberOfRows: Int = 10
+var numberOfRows: Int = 11
 var columns: [String] = ["A", "B", "C", "D", "E", "F", "G"]
 
 var cards: [ [String: [String]] ]?
 
-func generateCardArray(  passwordLenght: Int, charactersArrayOfString: [String], sequenceKey: SymmetricKey, numberOfCards: Int) {
-        var card = [String: [String]]()
+func generateCardArray(  passwordLenght: Int, charactersArrayOfString: [String], sequenceKey: SymmetricKey, numberOfCards: Int) ->  [[String]]?{
+//        var card = [String: [String]]()
+        var card = [[String]]()
         
-        for columnIndex in 0..<columns.count {
-            var column = [String]()
-            
-            for _ in 0..<numberOfRows {
+        for number in 0..<numberOfRows {
+            var row = [String]()
+//            row.append(columns[number])
+            row.append(String(number))
+
+            for columnIndex in 0..<columns.count {
+                if (number == 0) {
+                    row.append(columns[columnIndex])
+                } else {
                 let cell = getCellPasswordWithLenght(passwordLenght, fromCharacterSet: charactersArrayOfString, withKey: sequenceKey)
-                column.append(cell)
+                row.append(cell)
+                }
             }
-            
-            card[columns[columnIndex]] = column
+//            print(row)
+            card.append(row)
+//            card[columns[number]] = column
         }
-    print(card)
+    
+    return card
 }
 
 func getCellPasswordWithLenght(_ passwordLength: Int, fromCharacterSet characterSet: [String], withKey key: SymmetricKey) -> String {

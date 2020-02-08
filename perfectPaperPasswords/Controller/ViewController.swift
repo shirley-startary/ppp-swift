@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginEmailField.becomeFirstResponder()
+        loginPasswordField.isSecureTextEntry = true
+
         // Do any additional setup after loading the view.
     }
     
@@ -26,15 +29,32 @@ class ViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
-        } else {
-            self.performSegue(withIdentifier: "home", sender: homeViewController.self)
+        }
+        
+        if self.loginEmailField.text != "example@example.com" || self.loginPasswordField.text != "123456" {
+            let alertController = UIAlertController(title: "Error", message: "El correo o contraseña no coinciden con una cuenta válida", preferredStyle: .alert)
             
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+
+        } else {
+            loginPasswordField.text = ""
+            loginEmailField.text = ""
+            self.performSegue(withIdentifier: "home", sender: homeViewController.self)
         }
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
         print("Hola")
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
 
 }

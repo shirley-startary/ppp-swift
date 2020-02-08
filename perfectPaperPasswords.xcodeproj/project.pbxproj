@@ -15,6 +15,7 @@
 		AF09EE3123E6A28D00D34F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09EE2F23E6A28D00D34F48 /* LaunchScreen.storyboard */; };
 		AF790B3823EBA181003F6E3F /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF790B3723EBA181003F6E3F /* model.swift */; };
 		AF87903123EDE6B8007011AC /* cardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87903023EDE6B8007011AC /* cardViewController.swift */; };
+		AF8938AC23EE7BAD006586DD /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8938AB23EE7BAD006586DD /* cardCollectionViewCell.swift */; };
 		AFDBD7EA23E6CCCE00BFEAC8 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBD7E923E6CCCE00BFEAC8 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		AF09EE3223E6A28D00D34F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF790B3723EBA181003F6E3F /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		AF87903023EDE6B8007011AC /* cardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardViewController.swift; sourceTree = "<group>"; };
+		AF8938AB23EE7BAD006586DD /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
 		AFDBD7E923E6CCCE00BFEAC8 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				AF09EE2823E6A28900D34F48 /* ViewController.swift */,
 				AFDBD7E923E6CCCE00BFEAC8 /* homeViewController.swift */,
 				AF87903023EDE6B8007011AC /* cardViewController.swift */,
+				AF8938AB23EE7BAD006586DD /* cardCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				AF790B3823EBA181003F6E3F /* model.swift in Sources */,
 				AF09EE2923E6A28900D34F48 /* ViewController.swift in Sources */,
 				AF09EE2523E6A28900D34F48 /* AppDelegate.swift in Sources */,
+				AF8938AC23EE7BAD006586DD /* cardCollectionViewCell.swift in Sources */,
 				AF09EE2723E6A28900D34F48 /* SceneDelegate.swift in Sources */,
 				AF87903123EDE6B8007011AC /* cardViewController.swift in Sources */,
 				AFDBD7EA23E6CCCE00BFEAC8 /* homeViewController.swift in Sources */,
@@ -321,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M3N5ZRY78;
 				INFOPLIST_FILE = perfectPaperPasswords/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M3N5ZRY78;
 				INFOPLIST_FILE = perfectPaperPasswords/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

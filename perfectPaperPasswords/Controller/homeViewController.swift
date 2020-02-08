@@ -28,13 +28,27 @@ class homeViewController: UIViewController {
         sequenceKey.text = generateSequenceKey()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "passCardSegue" {
+            let cardView = segue.destination as! cardViewController
+            let x =  getKeyFromBase64String(sequenceKey.text!)
+          
+                    let passwordLength = Int(self.passcodeLength.text!) ?? 0
+                    let charactersArrayOfString = getCharacterArrayFrom(passcodeCharacter.text ?? "") ?? [""]
+         
+                   let card = generateCardArray(passwordLenght: passwordLength, charactersArrayOfString: charactersArrayOfString, sequenceKey: x!,numberOfCards: Int(firstPasscard.text!)!)
+            cardView.card = card!
+            
+        }
+    }
+    
     @IBAction func generateCard(_ sender: UIButton) {
-        let x =  getKeyFromBase64String(sequenceKey.text!)
-//        let y = getCypheredCounter128Bit(using: x!)
-        let passwordLength = Int(self.passcodeLength.text!) ?? 0
-        let charactersArrayOfString = getCharacterArrayFrom(passcodeCharacter.text ?? "") ?? [""]
-//        print(getCellPasswordWithLenght(passwordLength, fromCharacterSet: charactersArrayofString, withKey: x!))
-        generateCardArray(passwordLenght: passwordLength, charactersArrayOfString: charactersArrayOfString, sequenceKey: x!,numberOfCards: Int(firstPasscard.text!)!)
+//        let x =  getKeyFromBase64String(sequenceKey.text!)
+////        let y = getCypheredCounter128Bit(using: x!)
+//        let passwordLength = Int(self.passcodeLength.text!) ?? 0
+//        let charactersArrayOfString = getCharacterArrayFrom(passcodeCharacter.text ?? "") ?? [""]
+////        print(getCellPasswordWithLenght(passwordLength, fromCharacterSet: charactersArrayofString, withKey: x!))
+//       let card = generateCardArray(passwordLenght: passwordLength, charactersArrayOfString: charactersArrayOfString, sequenceKey: x!,numberOfCards: Int(firstPasscard.text!)!)
     }
 
 }
