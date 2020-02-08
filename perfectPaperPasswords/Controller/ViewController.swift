@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: UIButton) {
         if self.loginEmailField.text == "" || self.loginPasswordField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Por favor introduce email y contraseña", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Por favor introduce usuario y contraseña", preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
@@ -31,8 +31,8 @@ class ViewController: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
         }
         
-        if self.loginEmailField.text != "example@example.com" || self.loginPasswordField.text != "123456" {
-            let alertController = UIAlertController(title: "Error", message: "El correo o contraseña no coinciden con una cuenta válida", preferredStyle: .alert)
+        if self.loginEmailField.text != "example" || self.loginPasswordField.text != "123456" {
+            let alertController = UIAlertController(title: "Error", message: "El usuario o contraseña no coinciden con una cuenta válida", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -55,7 +55,5 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-
 }
 

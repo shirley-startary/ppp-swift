@@ -1,1 +1,2 @@
-# ppp-swift
+# PPP
+El sistema "Perfect Paper Passwords" ( PPP ) de GRC es una implementación directa, simple y segura de un sistema de contraseña de un solo uso (OTP) en papel. Cuando se usa junto con un nombre de cuenta y contraseña, los " códigos de acceso " individuales contenidos en las " tarjetas de acceso " de PPP sirven como el segundo factor ("algo que tiene") de un sistema seguro de autenticación de múltiples factores.
